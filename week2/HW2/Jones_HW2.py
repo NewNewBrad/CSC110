@@ -20,8 +20,7 @@
 #The house has length = 50, width = 30, height = 10
 #SIDING
 #******************************************
-#Total area of walls is 			1600
-#Total profile is 				80
+
 #Boxes of siding nails are 		40
 #Weather side strips are 		54
 #The cost of materials for siding	$11532.40
@@ -42,11 +41,11 @@
 house_length = int(input("Enter a length of house in feet: "))
 house_width = int(input("Enter a width of house in feet: "))
 house_height = int(input("Enter a height of house in feet: "))
-profile_cost = input("Enter a cost of profile in $: ")
-sidingNail_cost = input("Enter a cost of siding nails in $: ")
-sideStrip_cost = input("Enter a cost of side strips in $: ")
-shingle_cost = input("Enter a cost of a bundle of shingles in $: ")
-roofNail_cost = input("Enter a cost of roofing nails in $: ")
+profile_cost = int(input("Enter a cost of profile in $: "))
+sidingNail_cost = int(input("Enter a cost of siding nails in $: "))
+sideStrip_cost = int(input("Enter a cost of side strips in $: "))
+shingle_cost = int(input("Enter a cost of a bundle of shingles in $: "))
+roofNail_cost = int(input("Enter a cost of roofing nails in $: "))
 
 
 #PROCESSING
@@ -54,19 +53,32 @@ import math
 
 #SIDING MATH
 house_area = float((2 * (house_length * house_height)) + (2 * (house_height * house_width)))
-siding_area = float(house_area - (house_area * (20/100)))
-siding_profile = float((9 * 32) / 12)
-total_profile = float(siding_area / siding_profile)
-siding_nails = float((1/2) * total_profile)
-siding_strips = float(2 / (3 * total_profile))
+doorWindow_mod = house_area * 0.2
+siding_area = house_area - doorWindow_mod
+ONE_PROFILE = (1/20)
+total_profile = house_area * ONE_PROFILE
+siding_nails = float((1 / 2) * total_profile)
+siding_strips = float((2 / 3)* total_profile)
 
 #ROOF MATH
-#roof_height = float(( house_width - ((1/2) * house_width)))
-#roof_tri = float((house_width * roof_height) / 2 )
-roof_box = float(house_width + 5 * house_length)
-#roof_area = float((2 * roof_tri) + (2 * roof_box))
-roof_bundle = float(33.3)
-roof_nails = float(3 / roof_bundle)
+#The roof has 4 faces. 2 rectangle faces and 2 triangle faces
+#Triangle height determined using Pythagorean Thorem
+#1/2Width^2*Height^2=width^2
+#height^2= width^2 - 1/2width^2
+#sqrt both sides: height = width - 1/2width
+roof_height = float( house_width - ((1/2) * house_width))
+
+#Area of a triangle is (base(our width)*triangle height)/2)
+roof_tri = float(((house_width + 5) * roof_height) / 2 )
+
+#Area of a rectangle plus the 5ft overhang on length and width
+roof_box = float(house_width + 5 * house_length + 5)
+
+#Area of the Roof is area of 2 triangle faces + 2 Box faces
+roof_area = float((2 * roof_tri) + (2 * roof_box))
+ONE_BUNDLE = 33.3
+total_bundle = roof_area / ONE_BUNDLE
+roof_nails = float((1 / 3) * total_bundle)
 
 #COST MATH
 
@@ -75,26 +87,27 @@ roof_nails = float(3 / roof_bundle)
 
 
 #PROGRAM OUTPUT
+
 #TEST OUTPUT:
 print(house_length, house_width, house_height, profile_cost, sidingNail_cost, sideStrip_cost,
-      shingle_cost, roofNail_cost)
+      shingle_cost, roofNail_cost, roof_height, roof_tri, roof_box, roof_area)
 
 
 #print("The house has length = ", length, ", width = ", width, "height = ", height)
 print("\n")
 print("SIDING: ")
 print("************************************************************")
-print("Total area of walls is: ", house_area)
-print("Total profile is : ",)
-print("Boxes of siding nails needed: ",)
-print("Weather side strips needed: ",)
+print("Total area of walls is: ", format(house_area, '.0f'))
+print("Total profile is : ", math.ceil(total_profile))
+print("Boxes of siding nails needed: ", math.ceil(siding_nails))
+print("Weather side strips needed: ", math.ceil(siding_strips))
 print("TOTAL MATERIAL COST FOR SIDING: ",)
 print("************************************************************")
 print("\n")
 print("ROOF: ")
 print("************************************************************")
-print("Bundles of shingles required: ",)
-print("Boxes of roofing nails required: ",)
+print("Bundles of shingles required: ", math.ceil(total_bundle))
+print("Boxes of roofing nails required: ", math.ceil(roof_nails))
 print("TOTAL MATERIAL COST FOR ROOF: ",)
 print("************************************************************")
 
