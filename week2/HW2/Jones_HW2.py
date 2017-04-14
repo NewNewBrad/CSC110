@@ -39,9 +39,9 @@
 #######################################################
 
 #USER INPUT
-house_length = input("Enter a length of house in feet: ")
-house_width = input("Enter a width of house in feet: ")
-house_height = input("Enter a height of house in feet: ")
+house_length = int(input("Enter a length of house in feet: "))
+house_width = int(input("Enter a width of house in feet: "))
+house_height = int(input("Enter a height of house in feet: "))
 profile_cost = input("Enter a cost of profile in $: ")
 sidingNail_cost = input("Enter a cost of siding nails in $: ")
 sideStrip_cost = input("Enter a cost of side strips in $: ")
@@ -53,7 +53,7 @@ roofNail_cost = input("Enter a cost of roofing nails in $: ")
 import math
 
 #SIDING MATH
-house_area = float((2 * house_height) + (2 * house_width))
+house_area = float((2 * (house_length * house_height)) + (2 * (house_height * house_width)))
 siding_area = float(house_area - (house_area * (20/100)))
 siding_profile = float((9 * 32) / 12)
 total_profile = float(siding_area / siding_profile)
@@ -84,7 +84,7 @@ print(house_length, house_width, house_height, profile_cost, sidingNail_cost, si
 print("\n")
 print("SIDING: ")
 print("************************************************************")
-print("Total area of walls is: ",)
+print("Total area of walls is: ", house_area)
 print("Total profile is : ",)
 print("Boxes of siding nails needed: ",)
 print("Weather side strips needed: ",)
