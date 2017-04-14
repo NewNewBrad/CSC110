@@ -39,8 +39,8 @@
 #######################################################
 
 #USER INPUT
-house_len = input("Enter a length of house in feet: ")
-house_wid = input("Enter a width of house in feet: ")
+house_length = input("Enter a length of house in feet: ")
+house_width = input("Enter a width of house in feet: ")
 house_height = input("Enter a height of house in feet: ")
 profile_cost = input("Enter a cost of profile in $: ")
 sidingNail_cost = input("Enter a cost of siding nails in $: ")
@@ -49,11 +49,34 @@ shingle_cost = input("Enter a cost of a bundle of shingles in $: ")
 roofNail_cost = input("Enter a cost of roofing nails in $: ")
 
 
+#PROCESSING
+import math
+
+#SIDING MATH
+house_area = float((2 * house_height) + (2 * house_width))
+siding_area = float(house_area - (house_area * (20/100)))
+siding_profile = float((9 * 32) / 12)
+total_profile = float(siding_area / siding_profile)
+siding_nails = float((1/2) * total_profile)
+siding_strips = float(2 / (3 * total_profile))
+
+#ROOF MATH
+#roof_height = float(( house_width - ((1/2) * house_width)))
+#roof_tri = float((house_width * roof_height) / 2 )
+roof_box = float(house_width + 5 * house_length)
+#roof_area = float((2 * roof_tri) + (2 * roof_box))
+roof_bundle = float(33.3)
+roof_nails = float(3 / roof_bundle)
+
+#COST MATH
+
+
+
 
 
 #PROGRAM OUTPUT
 #TEST OUTPUT:
-print(house_len, house_wid, house_height, profile_cost, sidingNail_cost, sideStrip_cost,
+print(house_length, house_width, house_height, profile_cost, sidingNail_cost, sideStrip_cost,
       shingle_cost, roofNail_cost)
 
 
