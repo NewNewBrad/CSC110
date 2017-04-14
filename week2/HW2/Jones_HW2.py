@@ -39,19 +39,24 @@
 #######################################################
 
 #USER INPUT
-input("Enter a length of house in feet: ")
-input("Enter a width of house in feet: ")
-input("Enter a height of house in feet: ")
-input("Enter a cost of profile in $: ")
-input("Enter a cost of siding nails in $: ")
-input("Enter a cost of side strips in $: ")
-input("Enter a cost of a bundle of shingles in $: ")
-input("Enter a cost of roofing nails in $: ")
+house_len = input("Enter a length of house in feet: ")
+house_wid = input("Enter a width of house in feet: ")
+house_height = input("Enter a height of house in feet: ")
+profile_cost = input("Enter a cost of profile in $: ")
+sidingNail_cost = input("Enter a cost of siding nails in $: ")
+sideStrip_cost = input("Enter a cost of side strips in $: ")
+shingle_cost = input("Enter a cost of a bundle of shingles in $: ")
+roofNail_cost = input("Enter a cost of roofing nails in $: ")
 
 
 
 
 #PROGRAM OUTPUT
+#TEST OUTPUT:
+print(house_len, house_wid, house_height, profile_cost, sidingNail_cost, sideStrip_cost,
+      shingle_cost, roofNail_cost)
+
+
 #print("The house has length = ", length, ", width = ", width, "height = ", height)
 print("\n")
 print("SIDING: ")
