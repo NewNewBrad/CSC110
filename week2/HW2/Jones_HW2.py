@@ -39,11 +39,38 @@
 #######################################################
 
 #USER INPUT
-#Enter a length of house in feet:
-#Enter a width of house in feet:
-#Enter a height of house in feet:
-#Enter a cost of profile in $:
-#Enter a cost of siding nails in $:
-#Enter a cost of side strips in $:
-#Enter a cost of a bundle of shingles in $:
-#Enter a cost of roofing nails in $:
+input("Enter a length of house in feet: ")
+input("Enter a width of house in feet: ")
+input("Enter a height of house in feet: ")
+input("Enter a cost of profile in $: ")
+input("Enter a cost of siding nails in $: ")
+input("Enter a cost of side strips in $: ")
+input("Enter a cost of a bundle of shingles in $: ")
+input("Enter a cost of roofing nails in $: ")
+
+
+
+
+#PROGRAM OUTPUT
+#print("The house has length = ", length, ", width = ", width, "height = ", height)
+print("\n")
+print("SIDING: ")
+print("************************************************************")
+print("Total area of walls is: ",)
+print("Total profile is : ",)
+print("Boxes of siding nails needed: ",)
+print("Weather side strips needed: ",)
+print("TOTAL MATERIAL COST FOR SIDING: ",)
+print("************************************************************")
+print("\n")
+print("ROOF: ")
+print("************************************************************")
+print("Bundles of shingles required: ",)
+print("Boxes of roofing nails required: ",)
+print("TOTAL MATERIAL COST FOR ROOF: ",)
+print("************************************************************")
+
+print("\n")
+print("TOTAL: ")
+print("************************************************************")
+print("************************************************************")
