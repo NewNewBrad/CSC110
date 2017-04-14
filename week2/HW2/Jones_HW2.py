@@ -42,10 +42,10 @@ house_length = int(input("Enter a length of house in feet: "))
 house_width = int(input("Enter a width of house in feet: "))
 house_height = int(input("Enter a height of house in feet: "))
 profile_cost = int(input("Enter a cost of profile in $: "))
-sidingNail_cost = int(input("Enter a cost of siding nails in $: "))
-sideStrip_cost = int(input("Enter a cost of side strips in $: "))
-shingle_cost = int(input("Enter a cost of a bundle of shingles in $: "))
-roofNail_cost = int(input("Enter a cost of roofing nails in $: "))
+siding_nails_cost = int(input("Enter a cost of siding nails in $: "))
+siding_strips_cost = int(input("Enter a cost of side strips in $: "))
+bundle_cost = int(input("Enter a cost of a bundle of shingles in $: "))
+roof_nails_cost = int(input("Enter a cost of roofing nails in $: "))
 
 
 #PROCESSING
@@ -66,7 +66,7 @@ siding_strips = float((2 / 3)* total_profile)
 #1/2Width^2*Height^2=width^2
 #height^2= width^2 - 1/2width^2
 #sqrt both sides: height = width - 1/2width
-roof_height = float( house_width - ((1/2) * house_width))
+roof_height = float(house_width - ((1/2) * house_width))
 
 #Area of a triangle is (base(our width)*triangle height)/2)
 roof_tri = float(((house_width + 5) * roof_height) / 2 )
@@ -81,6 +81,14 @@ total_bundle = roof_area / ONE_BUNDLE
 roof_nails = float((1 / 3) * total_bundle)
 
 #COST MATH
+total_profile_cost = total_profile * profile_cost
+total_siding_nails_cost = siding_nails * siding_nails_cost
+total_siding_strips_cost = siding_strips * siding_strips_cost
+total_bundle_cost = total_bundle * bundle_cost
+total_roof_nails_cost = roof_nails * roof_nails_cost
+total_siding_cost = total_profile_cost + total_siding_nails_cost + total_siding_strips_cost
+total_roof_cost = total_bundle_cost + total_roof_nails_cost
+total_material_cost = total_siding_cost + total_roof_cost
 
 
 
@@ -89,8 +97,8 @@ roof_nails = float((1 / 3) * total_bundle)
 #PROGRAM OUTPUT
 
 #TEST OUTPUT:
-print(house_length, house_width, house_height, profile_cost, sidingNail_cost, sideStrip_cost,
-      shingle_cost, roofNail_cost, roof_height, roof_tri, roof_box, roof_area)
+print(house_length, house_width, house_height, profile_cost, siding_nails_cost, siding_strips_cost,
+      bundle_cost, roof_nails_cost, roof_height, roof_tri, roof_box, roof_area)
 
 
 #print("The house has length = ", length, ", width = ", width, "height = ", height)
