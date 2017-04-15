@@ -56,7 +56,7 @@ house_area = float((2 * (house_length * house_height)) + (2 * (house_height * ho
 doorWindow_mod = house_area * 0.2
 siding_area = house_area - doorWindow_mod
 ONE_PROFILE = (1/20)
-total_profile = house_area * ONE_PROFILE
+total_profile = siding_area * ONE_PROFILE
 siding_nails = float((1 / 2) * total_profile)
 siding_strips = float((2 / 3)* total_profile)
 
@@ -97,29 +97,27 @@ total_material_cost = total_siding_cost + total_roof_cost
 #PROGRAM OUTPUT
 
 #TEST OUTPUT:
-print(house_length, house_width, house_height, profile_cost, siding_nails_cost, siding_strips_cost,
-      bundle_cost, roof_nails_cost, roof_height, roof_tri, roof_box, roof_area)
-
-
+#print(house_length, house_width, house_height, profile_cost, siding_nails_cost, siding_strips_cost,
+#      bundle_cost, roof_nails_cost, roof_height, roof_tri, roof_box, roof_area)
 #print("The house has length = ", length, ", width = ", width, "height = ", height)
+
 print("\n")
+print("************************************************************")
+print("************************************************************")
 print("SIDING: ")
 print("************************************************************")
-print("Total area of walls is: ", format(house_area, '.0f'))
-print("Total profile is : ", math.ceil(total_profile))
-print("Boxes of siding nails needed: ", math.ceil(siding_nails))
-print("Weather side strips needed: ", math.ceil(siding_strips))
-print("TOTAL MATERIAL COST FOR SIDING: ", format(total_siding_cost, '.2f'))
+print("Total area of walls is: \t \t \t", format(siding_area, '.0f'))
+print("Total profile is : \t \t \t \t", math.ceil(total_profile))
+print("Boxes of siding nails needed: \t \t \t", math.ceil(siding_nails))
+print("Weather side strips needed: \t \t \t", math.ceil(siding_strips))
+print("TOTAL MATERIAL COST FOR SIDING: \t \t $" + format(total_siding_cost, '.2f'))
 print("************************************************************")
-print("\n")
 print("ROOF: ")
 print("************************************************************")
-print("Bundles of shingles required: ", math.ceil(total_bundle))
-print("Boxes of roofing nails required: ", math.ceil(roof_nails))
-print("TOTAL MATERIAL COST FOR ROOF: ",format(total_roof_cost, '.2f'))
+print("Bundles of shingles required: \t \t \t", math.ceil(total_bundle))
+print("Boxes of roofing nails required: \t \t", math.ceil(roof_nails))
+print("TOTAL MATERIAL COST FOR ROOF: \t \t \t $" + format(total_roof_cost, '.2f'))
 print("************************************************************")
-
-print("\n")
-print("TOTAL: ", format(total_material_cost, '.2f'))
+print("TOTAL: \t \t \t \t \t \t $" + format(total_material_cost, '.2f'))
 print("************************************************************")
 print("************************************************************")
