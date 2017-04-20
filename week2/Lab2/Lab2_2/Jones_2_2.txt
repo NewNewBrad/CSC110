@@ -1,0 +1,62 @@
+#Brad Jones
+#CSC110 - Section 6
+#4/17/2017
+#Math operators
+
+#Input
+num = (int(input("Please enter any number: ")))
+
+#Processing
+newNum1 = float((num * 3) + 6)
+newNum2 = float(newNum1 / 3)
+finalNum = float(num - newNum1)
+
+#Output
+print str(num), 'times 3, plus 6 is', str(newNum1) + '. Divided by 3 is', str(newNum2) + '.', num, 'minus', str(newNum2), 'is ', str(finalNum) + '.'
+
+
+**********************************************************************
+**********************************************************************
+
+#Brad Jones
+#CSC110 - Section 6
+#4/13/2017
+
+# Calculating the distance light travels
+# from the Sun to the Earth
+
+#PSUEDOCODE
+#set constant for speed of light(CAPITAL LETTERS)
+#set constant for distance from the Sun to the Earth
+#Calculate distance/speed = time
+#output time
+
+#processing
+LIGHTSPD = 3 * 10 ** 8
+DIST = 1.5 * 10 ** 11
+TIME = int(DIST / LIGHTSPD)
+MINUTES = TIME // 60
+SECONDS = TIME % 60
+
+
+#output
+print ("The ray of light passes the distance from the Sun \n"
+"to the Earth for", MINUTES, "mintutes and", SECONDS,"seconds.")
+
+
+**********************************************************************
+**********************************************************************
+
+#Brad Jones
+#CSC110 - Section 6
+#4/13/2017
+
+#Price change comparison tool.
+
+origPrice = float(input("Enter the price of your item: $"))
+modifier = float(input("Enter the percentage you want to modify the price: "))
+percent = modifier / 100
+incrPrice = int(origPrice + origPrice * percent)
+newPrice = int(incrPrice + incrPrice * (-1 * (percent)))
+print("After increaseing the price by", modifier, "%, and then reducing that price \n"
+      "by", modifier, "%, your new price is: $",  newPrice)
