@@ -1,0 +1,80 @@
+#Brad Jones
+#CSC110 - Section 6
+#4/20/2017
+#Bulk discount calculator
+
+
+#Input
+print('Software packages are $99. Discounts given to bulk orders.')
+apps = int(input('Enter the number of packages to order to calculate discount: '))
+subtotal = apps * 99
+
+
+#Processing
+#10% off for 10-19 packages
+if apps > 9 and apps < 20:
+    reward = str('10%')
+    discount = subtotal * (10/100)
+    finaltotal = (subtotal - discount)
+    
+
+#20% off for 20-49 packages
+if apps >= 20 and apps < 50:
+    reward = str('20%')
+    discount = subtotal * (20/100)
+    finaltotal = subtotal - discount
+
+
+#30% off for 50 or more packages
+if apps >= 50 :
+    reward = str('30%')
+    discount = subtotal * (30/100)
+    finaltotal = subtotal - discount
+
+
+#Output
+print('Your purchase of ', apps, ' software packages totals: $' + str(subtotal))
+print('You qualify to recieve $' + str(reward), 'off!')
+print('Your final total is: $' + str(finaltotal))
+print('You saved: $' + str(discount) + '.')
+
+
+#################################################################################
+#################################################################################
+
+#Brad Jones
+#CSC110 - Section 6
+#4/20/2017
+#BMI Calculator
+
+#Input
+weight = float(input('Enter your weight in pounds: '))
+height = float(input('Enter your height in inches: '))
+
+#processing
+#calculate BMI
+BMI = float((weight*703)/(height**2))
+
+if BMI < 18.5:
+    print('Your BMI is: ', format(BMI, '.1f'))
+    print('You are underweight')
+
+    #returns weight @ 18.5 BMI given users height
+    minOPTweight = ((18.5/703)*(height**2))
+
+    print('You need to gain', str(format(minOPTweight - weight, '.1f')), 'pounds to reach optimal BMI')
+
+
+elif BMI > 25:
+    print('Your BMI is: ', format(BMI, '.1f'))
+    print('You are overwight')
+
+    #returns weight @ 25 BMI given  users height
+    maxOPTweight = ((25/703)*(height**2))
+
+    print('You need to lose', str(format(weight - maxOPTweight, '.1f')), 'pounds to reach optimal BMI.')
+
+
+else:
+    print('Your BMI is: ', format(BMI, '.1f'))
+    print('You are at optimal weight')

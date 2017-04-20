@@ -28,12 +28,12 @@ if apps >= 20 and apps < 50:
 #30% off for 50 or more packages
 if apps >= 50 :
     reward = str('30%')
-    discount = subtotal * (30/100))
+    discount = subtotal * (30/100)
     finaltotal = subtotal - discount
 
 
 #Output
-print('Your purchase of ', apps, ' software packages totals: ', subtotal)
-print('You qualify to recieve ', reward, 'off!')
-print('Your final total is: ', finaltotal)
-print('You saved: ', discount, 'dollars.')
+print('Your purchase of ', apps, ' software packages totals: $' + str(subtotal))
+print('You qualify to recieve $' + str(reward), 'off!')
+print('Your final total is: $' + str(finaltotal))
+print('You saved: $' + str(discount) + '.')
