@@ -12,14 +12,14 @@ subtotal = apps * 99
 
 #Processing
 #10% off for 10-19 packages
-if apps > 9 and apps < 20:
+if 9 < apps < 20:
     reward = str('10%')
     discount = subtotal * (10/100)
     finaltotal = (subtotal - discount)
     
 
 #20% off for 20-49 packages
-if apps >= 20 and apps < 50:
+if 20 <= apps < 50:
     reward = str('20%')
     discount = subtotal * (20/100)
     finaltotal = subtotal - discount

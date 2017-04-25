@@ -8,6 +8,6 @@ origPrice = float(input("Enter the price of your item: $"))
 modifier = float(input("Enter the percentage you want to modify the price: "))
 percent = modifier / 100
 incrPrice = int(origPrice + origPrice * percent)
-newPrice = int(incrPrice + incrPrice * (-1 * (percent)))
+newPrice = int(incrPrice + incrPrice * (-1 * percent))
 print("After increaseing the price by", modifier, "%, and then reducing that price \n"
       "by", modifier, "%, your new price is: $",  newPrice)

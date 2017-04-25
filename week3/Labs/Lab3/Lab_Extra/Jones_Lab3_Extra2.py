@@ -7,7 +7,7 @@
 
 # input section
 number = int(input("Please input a 4 digit number. "))
-if number > 999 and number < 10000:
+if 999 < number < 10000:
     # Operation section
     digit1 = number//1000
     digit2 = number%1000//100

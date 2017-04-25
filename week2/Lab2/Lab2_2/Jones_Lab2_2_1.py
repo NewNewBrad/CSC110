@@ -12,4 +12,5 @@ newNum2 = float(newNum1 / 3)
 finalNum = float(num - newNum1)
 
 #Output
-print str(num), 'times 3, plus 6 is', str(newNum1) + '. Divided by 3 is', str(newNum2) + '.', num, 'minus', str(newNum2), 'is ', str(finalNum) + '.'
+print(str(num), 'times 3, plus 6 is', str(newNum1) + '. Divided by 3 is', str(newNum2) + '.', num, 'minus',
+      str(newNum2), 'is ', str(finalNum) + '.')

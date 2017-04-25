@@ -7,7 +7,7 @@
 
 #input section
 number = int(input("Please enter 3-d number you would like to calculate: "))
-if number > 99 and number < 1000:
+if 99 < number < 1000:
     # calculation
     firstDigit = number//100
     secondDigit = number%100//10

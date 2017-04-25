@@ -18,13 +18,13 @@ if num1 == 0 and num2 != 0:
 
 #if B=0, A!=0 and (C/A)<0
 elif num2 == 0 and num1 != 0 and (num3/num1) < 0:
-    answer1 = math.sqrt((-(num3)/num1))
-    answer2 = math.sqrt(-(-(num3)/num1))
+    answer1 = math.sqrt((-num3 / num1))
+    answer2 = math.sqrt(-(-num3 / num1))
     print('This equation has two solutions: ', format(answer1, '.2f'), 'and', format(answer2, '.2f'))
 
 #if C=0, A=!0
 elif num3 == 0 and num1 !=0:
-    answer1 = -((num2)/num1)
+    answer1 = -(num2 / num1)
     print('This equation has two solutions: ', format(answer1, '.2f'), 'and 0')
 
 #if A or B or C !=0        
