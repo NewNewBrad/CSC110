@@ -6,12 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c01fe13f-ad9e-485f-b20b-958b4a9a8031" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/week4/HW4/Jones_HW5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/week4/Lab5/Jones_Lab5_1.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/week4/Lab5/Jones_Lab5_2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/week4/Lab5/Jones_Lab5_3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/week4/Lab5/Jones_lab5_4.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week4/HW4/Jones_HW5.py" afterPath="$PROJECT_DIR$/week4/HW4/Jones_HW5.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/week4/HW4/Jones_HW5.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +53,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="731" />
-    <option name="width" value="1199" />
+    <option name="x" value="950" />
+    <option name="width" value="980" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -123,6 +118,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="week4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSC110" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CSC110" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="week4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lab5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -299,10 +312,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="731" y="0" width="1199" height="1030" extended-state="0" />
-    <editor active="true" />
+    <frame x="950" y="0" width="980" height="1030" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15123194" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18580376" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -484,25 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -515,10 +512,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/week4/HW4/Jones_HW5.py">
+    <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/week4/HW4/Jones_HW5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
