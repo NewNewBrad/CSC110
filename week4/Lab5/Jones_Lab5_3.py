@@ -1,12 +1,17 @@
 #Brad Jones - CSC110 Section 6 - 4/25/2017
 #Tuition Increase Calulator
-cost = 8000.00
-rate = 3/100
-y = 0
-print("The current tuition is: $" + format(cost,'.2f'))
+rate=float(3/100)
+year=1
+tuition = int(input("Please enter your current yearly tuition amount $"))
+years = int(input("Please enter the number of years you will attend: "))
+print("This program will now calculate your annual tuition for the next", years, "years")
 print("\tYear: \t\t Cost:")
-for year in range(1,5):
-    print("\t", y, "\t\t\t$" + format(cost,'.2f'))
-    incr = cost + cost * rate
-    cost += cost * rate
-    y += 1
+print("-"*32)
+if tuition > 0 or years > 0:
+    for year in range(1,years+1):
+        print("\t", format(year, '.0f'), "\t\t\t$" + format(tuition,'.2f'))
+        incr = tuition + tuition * rate
+        tuition += tuition * rate
+        year += 1
+else:
+    print("Please enter a valid number")
