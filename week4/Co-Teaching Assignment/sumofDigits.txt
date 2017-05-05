@@ -1,0 +1,9 @@
+SUM OF DIGITS
+
+
+sumOfDigits = 0
+while num > 0:
+	digit = num % 10
+	sumOfDigits += digit
+	num //= 10
+return sumOfDigits
