@@ -28,19 +28,22 @@ if menu_select == 1:
         print(rand, "\t", end="")
         if max_rand < rand:
             max_rand = rand
-        else:
-            print(max_rand)
     print()
 
     #count digits of largest number
+    digit = 0
     digit_count = 0
-    if max_rand > 0:
-        digit_count = int(math.log10(max_rand)) + 1
-    else:
-        digit_count = 1
+    if digit >= 0:
+        digit = max_rand % 10
+        digit_count + 1
     # output
     print(max_rand, "has the maximum number of digits that equal", digit_count)
-    print()
+
+    #restart program
+    #restart = input("Press Y to restart")
+    #if restart == "Y" or "y":
+    #    menu_select = 0
+    #print()
 
 
 #number of divisors in a random pool
@@ -52,16 +55,14 @@ elif menu_select == 2:
     print("NUM", " |", "Divs")
     print("-" * 13)
     for count in range(0, rand_select):
-        rand = random.randrange(100, 999)
-
-        # count divisors
-        div_count = 0
+        rand = random.randrange(100, 201)
         print(rand, "\t", end="")
-        for divisor in range(0, rand):
-            div = rand % 10
-            if div == 0:
+        div_count = 0
+        for num in range(1, rand - 1):
+            div_check = rand % num
+            if div_check == 0:
                 div_count += 1
-        print(div_count)
+        print(div_count, "\n")
 
         # track highest divisor and the number associated
         max_div = 0
@@ -71,11 +72,9 @@ elif menu_select == 2:
             max_div_num = rand
         else:
             max_div += 0
-    print()
 
     #output
     print("The number with the most divisors is", max_div_num, "with", max_div, "digits.")
-    print("MATH NOT WORKING CORRECTLY")
 
 #find numbers within a range that have a factor of three
 else:
