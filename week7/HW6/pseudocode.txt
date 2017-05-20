@@ -1,0 +1,165 @@
+
+File Format:
+	Line 1 = Year
+	Line 2 = # of Tornadoes
+	Line 3 = # of Deaths
+	Line 4 = # of Injuries
+
+User Input:
+	Name of file to read
+
+Output File:
+	named REPORT - "nameofinputfile"
+	# of total years (last year - first year)
+	total of tornadoes (sum of line 2's)
+	total of deaths (total of line 3's)
+	total of injuries (total of line 4's)
+	AVG of tornadoes (Total/#ofyears)
+	AVG of deaths (total/#ofyears
+	AVG of injuries(total/#ofyears)
+	Max toradoes/year (Max line2, and year)
+	Min tornadoes/year (min line2, and year)
+	Max deaths/year (Max line2, and year)
+	Min deaths/year (min line2, and year)
+	Max injuries/year (Max line2, and year)
+	Min injuries/year (min line2, and year)
+	
+Shell output:
+	read from Output file
+	output file location and success msg.
+
+NOTES:
+	read input file 4 lines at a time
+	find_YEARS loop counter
+		totalYEAR, currentYEAR
+	find_SUMS for lines 2, 3, and 4 (per loop)
+		totalTOR, totalFAT, totalINJ counter variables
+	find_AVGS of lines 2, 3, and 4 (per loop)
+		avgTOR = totalTOR/totalYEAR; avgFAT = totalFAT/totalYEAR; avgINJ = totalINJ/totalYEAR
+	find_MIN() of line 2 (returns boolean)
+		minTOR and minTORyear; minFAT and minFATyear; minINJ and minINJyear
+		find_MIN(currentMIN,newMIN): returns T/F; on T update minVALUE
+	find_MAX() of line 2 (returns boolean)
+		maxTOR and maxTORyear; maxFAT and maxFATyear; maxINJ and maxINJyear
+		find_MAX(currentMAX,newMAX): returns T/F; on T update maxVALUE
+
+FUNCTIONS NEEDED:
+	main()
+	find_MIN()
+	find_MAX()
+	find_AVG()
+
+
+FLOW:
+	ask user for file
+	open file
+	intialize variables (totals; avgs; currentmin for all types; currentmax for all types)
+	start loop (while file != "")
+
+	currentValue = line (YEAR)
+		line = currentYEAR	
+		totalTOR += 1
+		
+		find_MIN(currentMAX, line)
+			if currentMIN > line; return TRUE
+			if TRUE
+				minYEAR = line
+				
+		find_MAX(currentMAX, line)
+			if currentMAX < line; return TRUE
+			if TRUE
+				maxYEAR = line
+					
+		readline()
+
+
+	IF TOTALYEAR %4 == 2:
+	currentValue = line (TOR)
+		totalTOR += line
+		
+		find_MIN(currentMAX, line)
+			if currentMIN > line; return TRUE
+			if TRUE
+				minTOR = line
+				minTORyear = currentYEAR
+				
+		find_MAX(currentMAX, line)
+			if currentMAX < line; return TRUE
+			if TRUE
+				maxTOR = line
+				minTORyear = currentYEAR	
+		readline()
+
+
+	IF TOTAYEAR %4 == 1:
+	currentValue = line (FAT)
+		totalFAT += line
+
+		find_MIN(currentMAX, line)
+			if currentMIN > line; return TRUE
+			if TRUE
+				minFAT = line
+				minFATyear = currentYEAR
+				
+		find_MAX(currentMAX, line)
+			if currentMAX < line; return TRUE
+			if TRUE
+				maxFAT = line
+				minFATyear = currentYEAR	
+		readline()
+
+
+
+	IF TOTALYEAR %4 == 0
+	currentValue = line (INJ)
+		totalFAT += line
+
+		find_MIN(currentMAX, line)
+			if currentMIN > line; return TRUE
+			if TRUE
+				minINJ = line
+				minINJyear = currentYEAR
+				
+		find_MAX(currentMAX, line)
+			if currentMAX < line; return TRUE
+			if TRUE
+				maxINJ = line
+				minINJyear = currentYEAR	
+		readline()
+
+
+	
+	find_AVG(total, time) = avgTOR = totalTOR/totalYEAR
+	find_AVG(total, time) = avgFAT = totalFAT/totalYEAR
+ 	find_AVG(total,time) = avgINJ = totalINJ/totalYEAR
+
+
+OUTPUT to file AND shell:
+
+"For period", minYEAR, "to", maxYEAR, "in the State of Alabama were: "
+**********************************************************************
+"Total tornadoes: ", totalTOR
+"Total fatalities: ", totalFAT
+"Total injuries: "' totalINJ
+
+**********************************************************************
+"Average tornadoes: ", avgTOR
+"Average fatalities: ", avgFAT
+"Average Injuries: ", avgINJ
+
+**********************************************************************
+"Max tornadoes", maxTOR, "were in", maxTORyear
+"Min tornadoes", minTOR, "were in", minTORyear
+
+**********************************************************************
+"Max fatalities", maxFAT, "were in", maxFATyear
+"Min fatalities", minFAT, "were in", minFATyear
+
+**********************************************************************
+"Max injuries", maxINJ, "were in", maxINJyear
+"Min injuries", minINJ, "were in", minINJyear
+
+**********************************************************************
+				
+"An output file named Report_tornado.txt has been created."		
+		
