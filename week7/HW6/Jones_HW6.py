@@ -6,7 +6,6 @@ def main():
     #tor_File = open(user_File, 'r')
     tor_File = open('Tornado.txt', 'r')
 
-
     #Accumulator Variables
     totalYEAR = 0
     totalTOR = 0
@@ -31,14 +30,12 @@ def main():
     minINJ = 9999
     minINJyear = 9999
 
-
     #Reading the file, one line at a time
     line = tor_File.readline()
     loop_count = 1
     while line != '':
         #If statments divide data into Year/Tornado/Fatalities/Injuries
         #using loop_count % 4
-
         #YEAR
         if loop_count % 4 == 1:
             currentValue = int(line) #convert str to int
@@ -47,8 +44,6 @@ def main():
 
             maxYEAR = is_max(maxYEAR, currentValue)
             minYEAR = is_min(minYEAR, currentValue)
-
-
 
         # # of TORNADOES
         if loop_count % 4 == 2:
@@ -96,13 +91,14 @@ def main():
         loop_count += 1
         line = tor_File.readline()
 
-
-
-    avgTOR = str(totalTOR/totalYEAR)
-    avgFAT = str(totalFAT/totalYEAR)
-    avgINJ = str(totalINJ/totalYEAR)
+    #Find and format averages
+    avgTOR = str(format(totalTOR/totalYEAR, '.0f'))
+    avgFAT = str(format(totalFAT/totalYEAR, '.0f'))
+    avgINJ = str(format(totalINJ/totalYEAR, '.0f'))
     tor_File.close()
 
+
+    #Shell output
     print("For period", minYEAR, "to", maxYEAR, "in the State of Alabama were: ")
     print('*'*48)
     print("Total tornadoes: ", totalTOR)
