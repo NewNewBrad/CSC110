@@ -2,9 +2,9 @@
 # 5/20/2017
 # Working with Files - Tornados in Alabama
 def main():
-    #user_File = input(str("Enter the name of the file: "))
-    #tor_File = open(user_File, 'r')
-    tor_File = open('Tornado.txt', 'r')
+    user_File = input(str("Enter the name of the file: "))
+    tor_File = open(user_File, 'r')
+    #tor_File = open('Tornado.txt', 'r')
 
     #Accumulator Variables
     totalYEAR = 0
@@ -13,7 +13,7 @@ def main():
     totalINJ = 0
 
     maxYEAR = 0
-    minYEAR = 0
+    minYEAR = 9999
 
     maxTOR = 0
     maxTORyear = 0
@@ -90,6 +90,7 @@ def main():
         # Add to loop_count; restart loop if line != ''
         loop_count += 1
         line = tor_File.readline()
+        
 
     #Find and format averages
     avgTOR = str(format(totalTOR/totalYEAR, '.0f'))
@@ -97,9 +98,68 @@ def main():
     avgINJ = str(format(totalINJ/totalYEAR, '.0f'))
     tor_File.close()
 
+    #File output
+    outputFile = open('REPORT - '+user_File, 'w')
+    line1 = "For period", str(minYEAR)
+    line2 = "to", str(maxYEAR), "in the State of Alabama were: "
+    outputFile.write(line1)
+    outputFile.write('*'*48)
+    outputFile.write(str("Total tornadoes: ", totalTOR))
+    outputFile.write("Total fatalities: ", totalFAT)
+    outputFile.write("Total injuries: ", totalINJ)
+
+    outputFile.write('*' * 48)
+    outputFile.write("Average tornadoes: ", avgTOR)
+    outputFile.write("Average fatalities: ", avgFAT)
+    outputFile.write("Average Injuries: ", avgINJ)
+
+    outputFile.write('*' * 48)
+    outputFile.write("Max tornadoes", maxTOR, "were in", maxTORyear)
+    outputFile.write("Min tornadoes", minTOR, "were in", minTORyear)
+
+    outputFile.write('*' * 48)
+    outputFile.write("Max fatalities", maxFAT, "were in", maxFATyear)
+    outputFile.write("Min fatalities", minFAT, "were in", minFATyear)
+
+    outputFile.write('*' * 48)
+    outputFile.write("Max injuries", maxINJ, "were in", maxINJyear)
+    outputFile.write("Min injuries", minINJ, "were in", minINJyear)
+    outputFile.close()
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     #Shell output
-    print("For period", minYEAR, "to", maxYEAR, "in the State of Alabama were: ")
+    print("For period", str(minYEAR), "to", str(maxYEAR), "in the State of Alabama were: ")
+    line1 = "For period", str(minYEAR), "to", str(maxYEAR), "in the State of Alabama were: "
+    
     print('*'*48)
     print("Total tornadoes: ", totalTOR)
     print("Total fatalities: ", totalFAT)
@@ -123,14 +183,12 @@ def main():
     print("Min injuries", minINJ, "were in", minINJyear)
 
     print('*' * 48)
-    "An output file named Report_tornado.txt has been created."
-
-
+    print("An output file named Report -", user_File, "has been created.")
 
 
 #Compares 2 values and returns the smaller
 def is_min(minValue, currentValue):
-    print('running is_min()...')
+    #print('running is_min()...')
     if currentValue <= minValue:
         return currentValue
     else:
@@ -138,7 +196,7 @@ def is_min(minValue, currentValue):
 
 #Compares 2 values and returns the larger
 def is_max(maxValue, currentValue):
-    print('running is_max()')
+    #print('running is_max()')
     if currentValue >= maxValue:
         return currentValue
     else:
