@@ -1,0 +1,24 @@
+Tornado data for period 1995 to 2015 in the State of Alabama were: 
+ 
+************************************************
+Total tornadoes: 145 
+Total fatalities: 379 
+Total injuries: 3848 
+ 
+************************************************
+Average tornadoes: 53 
+Average fatalities: 18 
+Average Injuries: 183 
+ 
+************************************************
+Max tornadoes: 145 were in 2011 
+Min tornadoes: 23 were in 2013 
+ 
+************************************************
+Max fatalities: 271 were in 2011 
+Min fatalities: 0 were in 2015 
+ 
+************************************************
+Max injuries: 2250 were in 2011  
+Min injuries: 1 were in 1999  
+ 

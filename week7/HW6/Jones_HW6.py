@@ -90,7 +90,6 @@ def main():
         # Add to loop_count; restart loop if line != ''
         loop_count += 1
         line = tor_File.readline()
-        
 
     #Find and format averages
     avgTOR = str(format(totalTOR/totalYEAR, '.0f'))
@@ -100,66 +99,37 @@ def main():
 
     #File output
     outputFile = open('REPORT - '+user_File, 'w')
-    line1 = "For period", str(minYEAR)
-    line2 = "to", str(maxYEAR), "in the State of Alabama were: "
-    outputFile.write(line1)
+    outputFile.write("Tornado data for period {0} to {1} in the State of Alabama were: \n \n".format(minYEAR, maxYEAR))
     outputFile.write('*'*48)
-    outputFile.write(str("Total tornadoes: ", totalTOR))
-    outputFile.write("Total fatalities: ", totalFAT)
-    outputFile.write("Total injuries: ", totalINJ)
+    outputFile.write('\n')
+    outputFile.write("Total tornadoes: {0} \n".format(maxTOR))
+    outputFile.write("Total fatalities: {0} \n".format(totalFAT))
+    outputFile.write("Total injuries: {0} \n \n".format(totalINJ))
 
     outputFile.write('*' * 48)
-    outputFile.write("Average tornadoes: ", avgTOR)
-    outputFile.write("Average fatalities: ", avgFAT)
-    outputFile.write("Average Injuries: ", avgINJ)
+    outputFile.write('\n')
+    outputFile.write("Average tornadoes: {0} \n".format(avgTOR))
+    outputFile.write("Average fatalities: {0} \n".format(avgFAT))
+    outputFile.write("Average Injuries: {0} \n \n".format(avgINJ))
 
     outputFile.write('*' * 48)
-    outputFile.write("Max tornadoes", maxTOR, "were in", maxTORyear)
-    outputFile.write("Min tornadoes", minTOR, "were in", minTORyear)
+    outputFile.write('\n')
+    outputFile.write("Max tornadoes: {0} were in {1} \n".format(maxTOR, maxTORyear))
+    outputFile.write("Min tornadoes: {0} were in {1} \n \n".format(minTOR, minTORyear))
 
     outputFile.write('*' * 48)
-    outputFile.write("Max fatalities", maxFAT, "were in", maxFATyear)
-    outputFile.write("Min fatalities", minFAT, "were in", minFATyear)
+    outputFile.write('\n')
+    outputFile.write("Max fatalities: {0} were in {1} \n".format(maxFAT, maxFATyear))
+    outputFile.write("Min fatalities: {0} were in {1} \n \n".format(minFAT, minFATyear))
 
     outputFile.write('*' * 48)
-    outputFile.write("Max injuries", maxINJ, "were in", maxINJyear)
-    outputFile.write("Min injuries", minINJ, "were in", minINJyear)
+    outputFile.write('\n')
+    outputFile.write("Max injuries: {0} were in {1}  \n".format(maxINJ, maxINJyear))
+    outputFile.write("Min injuries: {0} were in {1}  \n \n".format(minINJ, minINJyear))
     outputFile.close()
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     #Shell output
-    print("For period", str(minYEAR), "to", str(maxYEAR), "in the State of Alabama were: ")
-    line1 = "For period", str(minYEAR), "to", str(maxYEAR), "in the State of Alabama were: "
-    
+    print("For period", minYEAR, "to", maxYEAR, "in the State of Alabama were: ")
     print('*'*48)
     print("Total tornadoes: ", totalTOR)
     print("Total fatalities: ", totalFAT)
@@ -183,7 +153,7 @@ def main():
     print("Min injuries", minINJ, "were in", minINJyear)
 
     print('*' * 48)
-    print("An output file named Report -", user_File, "has been created.")
+    print("An output file named Report-" + user_File, "has been created.")
 
 
 #Compares 2 values and returns the smaller
@@ -201,6 +171,5 @@ def is_max(maxValue, currentValue):
         return currentValue
     else:
         return maxValue
-
 
 main()
