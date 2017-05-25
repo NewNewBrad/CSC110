@@ -8,7 +8,6 @@
     <list default="true" id="c01fe13f-ad9e-485f-b20b-958b4a9a8031" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week7/HW6/Jones_HW6.py" afterPath="$PROJECT_DIR$/week7/HW6/Jones_HW6.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/week7/HW6/REPORT - Tornado.txt" afterPath="$PROJECT_DIR$/week7/HW6/REPORT - Tornado.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Jones_HW6.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jones_HW6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/week7/HW6/Jones_HW6.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2870">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="3875">
+              <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jones_HW7.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Jones_HW7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,6 +83,7 @@
         <option value="$PROJECT_DIR$/week6/HW5/Jones_HW5_v3.py" />
         <option value="$PROJECT_DIR$/week6/HW5/Jones_HW5.py" />
         <option value="$PROJECT_DIR$/week7/HW6/Jones_HW6.py" />
+        <option value="$PROJECT_DIR$/Jones_HW7.py" />
       </list>
     </option>
   </component>
@@ -106,7 +116,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -119,11 +129,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
@@ -346,6 +352,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -385,13 +392,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/week4/HW4/Jones_HW4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/week4/Lab5/Jones_Lab5_1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -701,8 +701,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/week7/HW6/Jones_HW6.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2870">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        <state relative-caret-position="3875">
+          <caret line="162" column="13" lean-forward="false" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jones_HW7.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
