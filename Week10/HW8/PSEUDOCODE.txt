@@ -1,0 +1,102 @@
+main()
+	countries = []
+	avg_density = []
+	total_pop = 0
+	total_avg_density = 0
+	max_pop = 0
+	max_pop_country = ""
+	min_pop = 999999999999
+	min_pop_country = ""
+	max_land = 0
+	max_land_country = ""
+	min_land = 999999999999
+	min_land_country = ""
+	max_density = 0
+	max_density_country = ""
+	min_density = 999999999999
+	min_density_country = ""
+	lo_density_countries = []
+	lo_density = 0
+	hi_density_countries = []
+	hi_density = 0	
+	file = open(file)
+	line_num = 0
+	line = file.readline()
+	while line != "":
+		for line_num in file:
+			line = line.split(',')
+			countries.append(line[0])
+			total_pop += line[1]
+			density = line[1] / line[2]
+			avg_density.append(density)
+			total_avg_density += density
+			line = file.readline()
+	countries_num = line_num
+	total_avg_density = total_avg_density/countries_num
+	lo_density = total_avg_density * (1/100)
+	hi_density = total_avg_density * 2	
+	file = open(file)
+	line_num = 0
+	line = file.readline()
+	while line != "":
+		for line_num in file:
+			line = line.split(",")
+			if line[1] > max_pop
+				max_pop = line[1]
+				max_pop_country = countries[line_num]
+			elif line[1] < min_pop
+				min_pop = line[1]
+				min_pop_country = cointries[line_num]
+			elif line[2] > max_land
+				max_land = line[2]
+				max_land_country = countries[line_num]
+			elif line[2] < min_pop
+				min_land = line[2]
+				min_land_country = cointries[line_num]
+			elif avg_density[line_num] > max_density
+				max_density = avg_density[line_num]
+				max_density_country = countries[line_num]
+			elif avg_density[line_num < min_density
+				min_density = line[1]
+				min_density_country = countries[line_num]
+			elif density[line_num] > total_avg_density*2
+				hi_density_country = line
+				hi_density_countries.append(high_density_country)
+			elif density[line_num] <= lo_density
+				lo_density_country = line
+				lo_density_countries.append(lo_density_country)
+	print(Total number of countries is countries)
+	print(Total world population is total_population people
+	print(max_pop_country has the highest population - max_pop people
+	print(min_pop_country has the lowest population - min_pop people
+	print(max_pop_country has the greatest land area - max_land sq.km
+	print(min_pop_country has the smallest land area - min_land sq.km
+	print(max_density_country has the highest population density - max_density people/sq.km
+	print(min_density_country has the lowest population density - min_density people/sq.km
+	print(****************************************
+	print(Average population density is 398.70
+	print(****************************************
+	print(----------------------------------------
+	print(Densely populated Countries
+	print(----------------------------------------
+	for hi_density_country in hi_density_countries
+		print({<12}, {<12}, {<12}.format(hi_density_country[0], hi_density_country[1], hi_density_country[2])
+	print(****************************************
+	print(----------------------------------------
+	print(Sparsly populated Countries
+	print(----------------------------------------
+	for lo_density_country in lo_density_countries
+		print({<12}, {<12}, {<12}.format(lo_density_country[0], lo_density_country[1], lo_density_country[2])
+
+
+
+
+
+
+
+
+
+
+
+
+main()
